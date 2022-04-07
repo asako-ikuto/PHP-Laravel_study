@@ -13,3 +13,5 @@
 
 Route::get('/', 'LoginController@index');
 Route::get('/register', 'RegisterController@index');
+Route::get('/dashboard', 'DashboardController@index');
+Route::post('/dashboard', 'RegisterController@store');
