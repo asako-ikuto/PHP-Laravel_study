@@ -5,7 +5,7 @@
 @section('content')
 @if (count($errors) > 0)
 <div>
-    <ul class="alert alert-danger" role="alert">
+    <ul class="alert alert-danger" style="list-style: none; padding-left: 0;" role="alert">
         @foreach($errors->all() as $error)
         <li>{{ $error }}</li>
         @endforeach
