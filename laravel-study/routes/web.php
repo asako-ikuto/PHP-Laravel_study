@@ -13,3 +13,4 @@
 
 Route::get('/', 'LoginController@index');
 Route::get('/register', 'RegisterController@index');
+Route::resource('dashboard', 'DashboardController', ['only' => ['index', 'store']]);

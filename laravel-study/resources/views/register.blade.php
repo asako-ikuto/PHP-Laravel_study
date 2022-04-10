@@ -3,7 +3,16 @@
 @section('title', 'Register')
 
 @section('content')
-<form method="POST" action="" style="display: inline;">
+@if (count($errors) > 0)
+<div>
+    <ul class="alert alert-danger" style="list-style: none; padding-left: 0;" role="alert">
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+<form method="POST" action="/dashboard" style="display: inline;">
     @csrf
     <label for="name" style="width:150px; text-align:right;">Name</label>
     <input type="text" name="name" size="30"><br>
